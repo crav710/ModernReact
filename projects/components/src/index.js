@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM  from 'react-dom';
 import faker from 'faker';
+import CommentDetail from './CommentDetail';
+import ApprovalCard from './ApprovalCard';
+import './style/App.css'
 const el = document.getElementById('root');
 
 const root = ReactDOM.createRoot(el);
@@ -9,48 +12,12 @@ const App= () =>{
 
     return (
         <div className='ui container comments'>
-            <div className='comment'>
-                <a href="/" className='avatar'>
-                    <img alt='avatar' src={faker.image.image()}/>
-                </a>
-                <div className='content'>
-                    <a href='/' className='author'>
-                        Sam
-                    </a>
-                    <div className='metadata'>
-                        <span className='date'>Today at 6:00PM</span>
-                    </div>
-                    <div className='text'>Nice Blog post</div>
-                </div>
-            </div> 
-            <div className='comment'>
-                <a href="/" className='avatar'>
-                    <img alt='avatar' src={faker.image.image()}/>
-                </a>
-                <div className='content'>
-                    <a href='/' className='author'>
-                        Sam
-                    </a>
-                    <div className='metadata'>
-                        <span className='date'>Today at 6:00PM</span>
-                    </div>
-                    <div className='text'>Nice Blog post</div>
-                </div>
-            </div> 
-            <div className='comment'>
-                <a href="/" className='avatar'>
-                    <img alt='avatar' src={faker.image.image()}/>
-                </a>
-                <div className='content'>
-                    <a href='/' className='author'>
-                        Sam
-                    </a>
-                    <div className='metadata'>
-                        <span className='date'>Today at 6:00PM</span>
-                    </div>
-                    <div className='text'>Nice Blog post</div>
-                </div>
-            </div> 
+            <ApprovalCard>
+                <CommentDetail author="Sam" timeAgo="Today at 4:45PM" commentText="Nice Blog" imgSrc={faker.image.image()}/>
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail author="Ram" timeAgo="Yesterday at 5:00PM" commentText="Interesting" imgSrc={faker.image.image()}/>
+            </ApprovalCard>
         </div>
     );
 }
