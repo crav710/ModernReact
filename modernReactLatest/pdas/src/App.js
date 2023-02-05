@@ -32,7 +32,7 @@ function App(){
                                 />                        
                         </div>
                         <div className="column is-4">
-                            <ProfileCard title="Cortana" handle="@cortana32" image={CortanaImage}
+                            <ProfileCard title="Cortana" handle="@cortana32" image={SiriImage}
                                         description="made by apple."
                                     />                        
                         </div>
